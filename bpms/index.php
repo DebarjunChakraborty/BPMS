@@ -67,16 +67,31 @@
       $conn->close();
     ?>
   </div>
-
-  <!-- Cart Modal -->
-  <div id="cart-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Your Cart</h2>
-      <div id="cart-items"></div>
-      <button id="clear-cart">Clear Cart</button>
+<!-- Cart Modal -->
+<div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <button id="clear-cart" class="btn btn-danger">Clear Cart</button>
+            <button id="buy-now" class="btn btn-primary">Buy Now</button>
+        </div>
     </div>
-  </div>
+
+    <!-- Buy Now Form Modal -->
+    <div id="buy-now-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="buy-now-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+                <button type="submit" class="btn btn-success">Confirm Purchase</button>
+            </form>
+        </div>
+    </div>
   
 </body>
 </html>
